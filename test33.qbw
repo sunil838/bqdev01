@@ -1,0 +1,1329 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<QueryBuilder productName="Aqua Data Studio" productVersion="20.5.0-3" buildNumber="57539" fileVersion="1.0.0">
+    <workbook>
+        <options useQuoteIdentifiers="true" schemaQualifiedTable="true" dbQualifiedTable="true" autoJoin="false" schemaGrouping="true" showSystemEntities="false" ignoreUnusedEntities="false" maxResults="" noHeaderRow="false">
+            <addEntityOptions limitToUserSchema="false" includeTable="true" includeView="false" addSelectColumnOption="None" database="" schema=""/>
+        </options>
+        <dbContexts>
+            <connection path="GBQ01" pathname="C:\Users\sukumar\.datastudio\connections\GBQ01.conn" username="" schema="" database="annular-garage-274212" host="" version="Google BigQuery V2" driver="GOOGLE_BIGQUERY" server="Google BigQuery" warehouse=""/>
+            <dbContext schema="" database="annular-garage-274212" warehouse=""/>
+            <dbContext schema="" database="ornate-node-239908" warehouse=""/>
+            <dbContext schema="" database="sap01-188316" warehouse=""/>
+            <displayContext schema="" database="sap01-188316" warehouse=""/>
+            <queryContext schema="" database="sap01-188316" warehouse=""/>
+        </dbContexts>
+        <sheets selectedSheet="DerivedTable_19" lastDerivedSheetID="19" lastSubquerySheetID="0" lastUnionSheetID="1">
+            <sheet sqlSheetType="DerivedTable" name="DerivedTable_1" title="Derived_table_1" tabColor="-1" displayIndex="18">
+                <options/>
+                <decks>
+                    <deck id="Select" show="true" bounds="165,5,1360,30"/>
+                    <deck id="Where" show="true" bounds="5,5,155,121"/>
+                    <deck id="GroupBy" show="true" bounds="5,131,155,59"/>
+                    <deck id="Having" show="true" bounds="5,195,155,59"/>
+                    <deck id="OrderBy" show="true" bounds="5,259,155,59"/>
+                    <deck id="Union" show="true" bounds="5,323,155,59"/>
+                    <deck id="IndexManager" show="false" bounds="0,0,0,0"/>
+                </decks>
+                <layout>
+                    <item type="row">
+                        <children>
+                            <item type="column">
+                                <children>
+                                    <item type="widget" key="Where"/>
+                                    <item type="widget" key="GroupBy"/>
+                                    <item type="widget" key="Having"/>
+                                    <item type="widget" key="OrderBy"/>
+                                    <item type="widget" key="Union"/>
+                                </children>
+                            </item>
+                            <item type="column">
+                                <children>
+                                    <item type="widget" key="Select"/>
+                                    <item type="widget" key="main"/>
+                                </children>
+                            </item>
+                        </children>
+                    </item>
+                </layout>
+                <sqlEntity dbObjectType="Table" name="zsapsltlikp01" alias="zsapsltlikp01" schema="zsapsltdev01" database="sap01-188316">
+                    <uiProperties showNameOnly="false" explicitStateChange="false" bounds="71,34,175,250"/>
+                </sqlEntity>
+                <sqlEntity dbObjectType="Table" name="zsapsltlips02" alias="zsapsltlips02" schema="zsapsltdev01" database="sap01-188316">
+                    <uiProperties showNameOnly="false" explicitStateChange="false" bounds="377,150,170,250"/>
+                </sqlEntity>
+                <join operator="=" allRowsFromSource="true" allRowsFromTarget="false">
+                    <source qbObjectType="Column" name="VBELN" displayName="VBELN" dbObjectType="Column" dbObjectName="VBELN" entityAlias="zsapsltlikp01"/>
+                    <target qbObjectType="Column" name="VBELN" displayName="VBELN" dbObjectType="Column" dbObjectName="VBELN" entityAlias="zsapsltlips02"/>
+                </join>
+                <sqlField sqlFieldType="Select" displayName="DELIVERY_NUM : VBELN" alias="DELIVERY_NUM">
+                    <queryObject qbObjectType="Column" name="VBELN" displayName="VBELN" dbObjectType="Column" dbObjectName="VBELN" entityAlias="zsapsltlikp01"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="VSTEL">
+                    <queryObject qbObjectType="Column" name="VSTEL" displayName="VSTEL" dbObjectType="Column" dbObjectName="VSTEL" entityAlias="zsapsltlikp01"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="WADAT_IST">
+                    <queryObject qbObjectType="Column" name="WADAT_IST" displayName="WADAT_IST" dbObjectType="Column" dbObjectName="WADAT_IST" entityAlias="zsapsltlikp01"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="KDGRP">
+                    <queryObject qbObjectType="Column" name="KDGRP" displayName="KDGRP" dbObjectType="Column" dbObjectName="KDGRP" entityAlias="zsapsltlikp01"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="VSBED">
+                    <queryObject qbObjectType="Column" name="VSBED" displayName="VSBED" dbObjectType="Column" dbObjectName="VSBED" entityAlias="zsapsltlikp01"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="ROUTE">
+                    <queryObject qbObjectType="Column" name="ROUTE" displayName="ROUTE" dbObjectType="Column" dbObjectName="ROUTE" entityAlias="zsapsltlikp01"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="INCO1">
+                    <queryObject qbObjectType="Column" name="INCO1" displayName="INCO1" dbObjectType="Column" dbObjectName="INCO1" entityAlias="zsapsltlikp01"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="INCO2">
+                    <queryObject qbObjectType="Column" name="INCO2" displayName="INCO2" dbObjectType="Column" dbObjectName="INCO2" entityAlias="zsapsltlikp01"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="HANDLE">
+                    <queryObject qbObjectType="Column" name="HANDLE" displayName="HANDLE" dbObjectType="Column" dbObjectName="HANDLE" entityAlias="zsapsltlikp01"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="KUNNR">
+                    <queryObject qbObjectType="Column" name="KUNNR" displayName="KUNNR" dbObjectType="Column" dbObjectName="KUNNR" entityAlias="zsapsltlikp01"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="KUNAG">
+                    <queryObject qbObjectType="Column" name="KUNAG" displayName="KUNAG" dbObjectType="Column" dbObjectName="KUNAG" entityAlias="zsapsltlikp01"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="POSNR">
+                    <queryObject qbObjectType="Column" name="POSNR" displayName="POSNR" dbObjectType="Column" dbObjectName="POSNR" entityAlias="zsapsltlips02"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="VGBEL">
+                    <queryObject qbObjectType="Column" name="VGBEL" displayName="VGBEL" dbObjectType="Column" dbObjectName="VGBEL" entityAlias="zsapsltlips02"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="VGPOS">
+                    <queryObject qbObjectType="Column" name="VGPOS" displayName="VGPOS" dbObjectType="Column" dbObjectName="VGPOS" entityAlias="zsapsltlips02"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="ERDAT">
+                    <queryObject qbObjectType="Column" name="ERDAT" displayName="ERDAT" dbObjectType="Column" dbObjectName="ERDAT" entityAlias="zsapsltlikp01"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="PSTYV">
+                    <queryObject qbObjectType="Column" name="PSTYV" displayName="PSTYV" dbObjectType="Column" dbObjectName="PSTYV" entityAlias="zsapsltlips02"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="PRCTR">
+                    <queryObject qbObjectType="Column" name="PRCTR" displayName="PRCTR" dbObjectType="Column" dbObjectName="PRCTR" entityAlias="zsapsltlips02"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="MATNR">
+                    <queryObject qbObjectType="Column" name="MATNR" displayName="MATNR" dbObjectType="Column" dbObjectName="MATNR" entityAlias="zsapsltlips02"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="WERKS">
+                    <queryObject qbObjectType="Column" name="WERKS" displayName="WERKS" dbObjectType="Column" dbObjectName="WERKS" entityAlias="zsapsltlips02"/>
+                </sqlField>
+                <sqlField sqlFieldType="Where" operator="&gt;" value="2020-01-01" quoteEnabled="true">
+                    <queryObject qbObjectType="Column" name="ERDAT" displayName="ERDAT" dbObjectType="Column" dbObjectName="ERDAT" entityAlias="zsapsltlikp01"/>
+                </sqlField>
+                <filterLogic sqlFieldType="Where" filterOperator="AND"/>
+            </sheet>
+            <sheet sqlSheetType="DerivedTable" name="DerivedTable_2" title="DerivedTable_2" tabColor="-1" displayIndex="17">
+                <options/>
+                <decks>
+                    <deck id="Select" show="true" bounds="165,5,1360,30"/>
+                    <deck id="Where" show="true" bounds="5,5,155,59"/>
+                    <deck id="GroupBy" show="true" bounds="5,69,155,59"/>
+                    <deck id="Having" show="true" bounds="5,133,155,59"/>
+                    <deck id="OrderBy" show="true" bounds="5,197,155,59"/>
+                    <deck id="Union" show="true" bounds="5,261,155,59"/>
+                    <deck id="IndexManager" show="false" bounds="0,0,0,0"/>
+                </decks>
+                <layout>
+                    <item type="row">
+                        <children>
+                            <item type="column">
+                                <children>
+                                    <item type="widget" key="Where"/>
+                                    <item type="widget" key="GroupBy"/>
+                                    <item type="widget" key="Having"/>
+                                    <item type="widget" key="OrderBy"/>
+                                    <item type="widget" key="Union"/>
+                                </children>
+                            </item>
+                            <item type="column">
+                                <children>
+                                    <item type="widget" key="Select"/>
+                                    <item type="widget" key="main"/>
+                                </children>
+                            </item>
+                        </children>
+                    </item>
+                </layout>
+                <sqlEntity dbObjectType="DerivedTable" name="DerivedTable_1" alias="DerivedTable_1" schema="" database="annular-garage-274212" derivedSheet="DerivedTable_1">
+                    <uiProperties showNameOnly="false" explicitStateChange="false" bounds="15,7,175,395"/>
+                </sqlEntity>
+                <sqlEntity dbObjectType="Table" name="zsapslttgmapping02" alias="zsapslttgmapping02" schema="zsapsltdev01" database="sap01-188316">
+                    <uiProperties showNameOnly="false" explicitStateChange="false" bounds="386,32,175,250"/>
+                </sqlEntity>
+                <join operator="" customExpression="ltrim(`DerivedTable_1`.`PRCTR`,'0') = `zsapslttgmapping02`.`PRCTR` and `DerivedTable_1`.`WERKS` = `zsapslttgmapping02`.`Plant` and `DerivedTable_1`.`VSTEL` = `zsapslttgmapping02`.`ShippingPt`" customExpressionResetOperator="=" allRowsFromSource="true" allRowsFromTarget="false">
+                    <source qbObjectType="DerivedColumn" name="PRCTR" entityAlias="DerivedTable_1">
+                        <queryObject qbObjectType="Column" name="PRCTR" displayName="PRCTR" dbObjectType="Column" dbObjectName="PRCTR" entityAlias="zsapsltlips02"/>
+                    </source>
+                    <target qbObjectType="Column" name="PRCTR" displayName="PRCTR" dbObjectType="Column" dbObjectName="PRCTR" entityAlias="zsapslttgmapping02"/>
+                </join>
+                <join operator="" customExpression="ltrim(`DerivedTable_1`.`PRCTR`,'0') = `zsapslttgmapping02`.`PRCTR` and `DerivedTable_1`.`WERKS` = `zsapslttgmapping02`.`Plant` and `DerivedTable_1`.`VSTEL` = `zsapslttgmapping02`.`ShippingPt`" customExpressionResetOperator="=" allRowsFromSource="true" allRowsFromTarget="false">
+                    <source qbObjectType="DerivedColumn" name="WERKS" entityAlias="DerivedTable_1">
+                        <queryObject qbObjectType="Column" name="WERKS" displayName="WERKS" dbObjectType="Column" dbObjectName="WERKS" entityAlias="zsapsltlips02"/>
+                    </source>
+                    <target qbObjectType="Column" name="Plant" displayName="Plant" dbObjectType="Column" dbObjectName="Plant" entityAlias="zsapslttgmapping02"/>
+                </join>
+                <join operator="" customExpression="ltrim(`DerivedTable_1`.`PRCTR`,'0') = `zsapslttgmapping02`.`PRCTR` and `DerivedTable_1`.`WERKS` = `zsapslttgmapping02`.`Plant` and `DerivedTable_1`.`VSTEL` = `zsapslttgmapping02`.`ShippingPt`" customExpressionResetOperator="=" allRowsFromSource="true" allRowsFromTarget="false">
+                    <source qbObjectType="DerivedColumn" name="VSTEL" entityAlias="DerivedTable_1">
+                        <queryObject qbObjectType="Column" name="VSTEL" displayName="VSTEL" dbObjectType="Column" dbObjectName="VSTEL" entityAlias="zsapsltlikp01"/>
+                    </source>
+                    <target qbObjectType="Column" name="ShippingPt" displayName="ShippingPt" dbObjectType="Column" dbObjectName="ShippingPt" entityAlias="zsapslttgmapping02"/>
+                </join>
+                <sqlField sqlFieldType="Select" displayName="DerivedTable_1.*">
+                    <queryObject qbObjectType="AllColumns" name="DerivedTable_1" displayName="DerivedTable_1.*" dbObjectType="DerivedTable" dbObjectName="DerivedTable_1" entityAlias="DerivedTable_1"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="Object_ID">
+                    <queryObject qbObjectType="Column" name="Object_ID" displayName="Object_ID" dbObjectType="Column" dbObjectName="Object_ID" entityAlias="zsapslttgmapping02"/>
+                </sqlField>
+            </sheet>
+            <sheet sqlSheetType="DerivedTable" name="DerivedTable_3" title="DerivedTable_3" tabColor="-1" displayIndex="16">
+                <options/>
+                <decks>
+                    <deck id="Select" show="true" bounds="165,5,1360,30"/>
+                    <deck id="Where" show="true" bounds="5,5,155,59"/>
+                    <deck id="GroupBy" show="true" bounds="5,69,155,59"/>
+                    <deck id="Having" show="true" bounds="5,133,155,59"/>
+                    <deck id="OrderBy" show="true" bounds="5,197,155,59"/>
+                    <deck id="Union" show="true" bounds="5,261,155,59"/>
+                    <deck id="IndexManager" show="false" bounds="0,0,0,0"/>
+                </decks>
+                <layout>
+                    <item type="row">
+                        <children>
+                            <item type="column">
+                                <children>
+                                    <item type="widget" key="Where"/>
+                                    <item type="widget" key="GroupBy"/>
+                                    <item type="widget" key="Having"/>
+                                    <item type="widget" key="OrderBy"/>
+                                    <item type="widget" key="Union"/>
+                                </children>
+                            </item>
+                            <item type="column">
+                                <children>
+                                    <item type="widget" key="Select"/>
+                                    <item type="widget" key="main"/>
+                                </children>
+                            </item>
+                        </children>
+                    </item>
+                </layout>
+                <sqlEntity dbObjectType="DerivedTable" name="DerivedTable_2" alias="DerivedTable_2" schema="" database="annular-garage-274212" derivedSheet="DerivedTable_2">
+                    <uiProperties showNameOnly="false" explicitStateChange="false" bounds="15,7,175,250"/>
+                </sqlEntity>
+                <sqlEntity dbObjectType="Table" name="zsapslt_otssprofitmap01" alias="zsapslt_otssprofitmap01" schema="zsapsltdev01" database="sap01-188316">
+                    <uiProperties showNameOnly="false" explicitStateChange="false" bounds="459,46,175,250"/>
+                </sqlEntity>
+                <join operator="" customExpression="ltrim(`DerivedTable_2`.`PRCTR`,'0') = `zsapslt_otssprofitmap01`.`PROFIT_CENTER`" customExpressionResetOperator="=" allRowsFromSource="true" allRowsFromTarget="false">
+                    <source qbObjectType="DerivedColumn" name="PRCTR" entityAlias="DerivedTable_2">
+                        <queryObject qbObjectType="DerivedColumn" name="PRCTR" entityAlias="DerivedTable_1">
+                            <queryObject qbObjectType="Column" name="PRCTR" displayName="PRCTR" dbObjectType="Column" dbObjectName="PRCTR" entityAlias="zsapsltlips02"/>
+                        </queryObject>
+                    </source>
+                    <target qbObjectType="Column" name="PROFIT_CENTER" displayName="PROFIT_CENTER" dbObjectType="Column" dbObjectName="PROFIT_CENTER" entityAlias="zsapslt_otssprofitmap01"/>
+                </join>
+                <sqlField sqlFieldType="Select" displayName="DerivedTable_2.*">
+                    <queryObject qbObjectType="AllColumns" name="DerivedTable_2" displayName="DerivedTable_2.*" dbObjectType="DerivedTable" dbObjectName="DerivedTable_2" entityAlias="DerivedTable_2"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="Description">
+                    <queryObject qbObjectType="Column" name="Description" displayName="Description" dbObjectType="Column" dbObjectName="Description" entityAlias="zsapslt_otssprofitmap01"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="Level_3">
+                    <queryObject qbObjectType="Column" name="Level_3" displayName="Level_3" dbObjectType="Column" dbObjectName="Level_3" entityAlias="zsapslt_otssprofitmap01"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="Level_2">
+                    <queryObject qbObjectType="Column" name="Level_2" displayName="Level_2" dbObjectType="Column" dbObjectName="Level_2" entityAlias="zsapslt_otssprofitmap01"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="Level_1">
+                    <queryObject qbObjectType="Column" name="Level_1" displayName="Level_1" dbObjectType="Column" dbObjectName="Level_1" entityAlias="zsapslt_otssprofitmap01"/>
+                </sqlField>
+            </sheet>
+            <sheet sqlSheetType="DerivedTable" name="DerivedTable_5" title="DerivedTable_5" displayIndex="15">
+                <options/>
+                <decks>
+                    <deck id="Select" show="true" bounds="165,5,1360,30"/>
+                    <deck id="Where" show="true" bounds="5,5,155,59"/>
+                    <deck id="GroupBy" show="true" bounds="5,69,155,59"/>
+                    <deck id="Having" show="true" bounds="5,133,155,59"/>
+                    <deck id="OrderBy" show="true" bounds="5,197,155,59"/>
+                    <deck id="Union" show="true" bounds="5,261,155,59"/>
+                    <deck id="IndexManager" show="false" bounds="0,0,0,0"/>
+                </decks>
+                <layout>
+                    <item type="row">
+                        <children>
+                            <item type="column">
+                                <children>
+                                    <item type="widget" key="Where"/>
+                                    <item type="widget" key="GroupBy"/>
+                                    <item type="widget" key="Having"/>
+                                    <item type="widget" key="OrderBy"/>
+                                    <item type="widget" key="Union"/>
+                                </children>
+                            </item>
+                            <item type="column">
+                                <children>
+                                    <item type="widget" key="Select"/>
+                                    <item type="widget" key="main"/>
+                                </children>
+                            </item>
+                        </children>
+                    </item>
+                </layout>
+                <sqlEntity dbObjectType="DerivedTable" name="DerivedTable_3" alias="DerivedTable_3" schema="" database="annular-garage-274212" derivedSheet="DerivedTable_3">
+                    <uiProperties showNameOnly="false" explicitStateChange="false" bounds="15,7,175,438"/>
+                </sqlEntity>
+                <sqlEntity dbObjectType="Table" name="zsapsltvbap01" alias="zsapsltvbap01" schema="zsapsltdev01" database="sap01-188316">
+                    <uiProperties showNameOnly="false" explicitStateChange="false" bounds="370,71,175,250"/>
+                </sqlEntity>
+                <join operator="=" allRowsFromSource="true" allRowsFromTarget="false">
+                    <source qbObjectType="DerivedColumn" name="VGBEL" entityAlias="DerivedTable_3">
+                        <queryObject qbObjectType="DerivedColumn" name="VGBEL" entityAlias="DerivedTable_2">
+                            <queryObject qbObjectType="DerivedColumn" name="VGBEL" entityAlias="DerivedTable_1">
+                                <queryObject qbObjectType="Column" name="VGBEL" displayName="VGBEL" dbObjectType="Column" dbObjectName="VGBEL" entityAlias="zsapsltlips02"/>
+                            </queryObject>
+                        </queryObject>
+                    </source>
+                    <target qbObjectType="Column" name="VBELN" displayName="VBELN" dbObjectType="Column" dbObjectName="VBELN" entityAlias="zsapsltvbap01"/>
+                </join>
+                <join operator="=" allRowsFromSource="true" allRowsFromTarget="false">
+                    <source qbObjectType="DerivedColumn" name="VGPOS" entityAlias="DerivedTable_3">
+                        <queryObject qbObjectType="DerivedColumn" name="VGPOS" entityAlias="DerivedTable_2">
+                            <queryObject qbObjectType="DerivedColumn" name="VGPOS" entityAlias="DerivedTable_1">
+                                <queryObject qbObjectType="Column" name="VGPOS" displayName="VGPOS" dbObjectType="Column" dbObjectName="VGPOS" entityAlias="zsapsltlips02"/>
+                            </queryObject>
+                        </queryObject>
+                    </source>
+                    <target qbObjectType="Column" name="POSNR" displayName="POSNR" dbObjectType="Column" dbObjectName="POSNR" entityAlias="zsapsltvbap01"/>
+                </join>
+                <sqlField sqlFieldType="Select" displayName="DerivedTable_3.*">
+                    <queryObject qbObjectType="AllColumns" name="DerivedTable_3" displayName="DerivedTable_3.*" dbObjectType="DerivedTable" dbObjectName="DerivedTable_3" entityAlias="DerivedTable_3"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="SALES_ORDER_NUM : VBELN" alias="SALES_ORDER_NUM">
+                    <queryObject qbObjectType="Column" name="VBELN" displayName="VBELN" dbObjectType="Column" dbObjectName="VBELN" entityAlias="zsapsltvbap01"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="SALES_ORDER_ITEM : POSNR" alias="SALES_ORDER_ITEM">
+                    <queryObject qbObjectType="Column" name="POSNR" displayName="POSNR" dbObjectType="Column" dbObjectName="POSNR" entityAlias="zsapsltvbap01"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="NETWR">
+                    <queryObject qbObjectType="Column" name="NETWR" displayName="NETWR" dbObjectType="Column" dbObjectName="NETWR" entityAlias="zsapsltvbap01"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="ARKTX">
+                    <queryObject qbObjectType="Column" name="ARKTX" displayName="ARKTX" dbObjectType="Column" dbObjectName="ARKTX" entityAlias="zsapsltvbap01"/>
+                </sqlField>
+            </sheet>
+            <sheet sqlSheetType="DerivedTable" name="DerivedTable_6" title="DerivedTable_6" displayIndex="14">
+                <options/>
+                <decks>
+                    <deck id="Select" show="true" bounds="165,5,1360,30"/>
+                    <deck id="Where" show="true" bounds="5,5,155,59"/>
+                    <deck id="GroupBy" show="true" bounds="5,69,155,59"/>
+                    <deck id="Having" show="true" bounds="5,133,155,59"/>
+                    <deck id="OrderBy" show="true" bounds="5,197,155,59"/>
+                    <deck id="Union" show="true" bounds="5,261,155,59"/>
+                    <deck id="IndexManager" show="false" bounds="0,0,0,0"/>
+                </decks>
+                <layout>
+                    <item type="row">
+                        <children>
+                            <item type="column">
+                                <children>
+                                    <item type="widget" key="Where"/>
+                                    <item type="widget" key="GroupBy"/>
+                                    <item type="widget" key="Having"/>
+                                    <item type="widget" key="OrderBy"/>
+                                    <item type="widget" key="Union"/>
+                                </children>
+                            </item>
+                            <item type="column">
+                                <children>
+                                    <item type="widget" key="Select"/>
+                                    <item type="widget" key="main"/>
+                                </children>
+                            </item>
+                        </children>
+                    </item>
+                </layout>
+                <sqlEntity dbObjectType="DerivedTable" name="DerivedTable_5" alias="DerivedTable_5_1" schema="" database="annular-garage-274212" derivedSheet="DerivedTable_5">
+                    <uiProperties showNameOnly="false" explicitStateChange="false" bounds="15,7,175,250"/>
+                </sqlEntity>
+                <sqlEntity dbObjectType="Table" name="zsapsltvbak01" alias="zsapsltvbak01" schema="zsapsltdev01" database="sap01-188316">
+                    <uiProperties showNameOnly="false" explicitStateChange="false" bounds="247,7,175,250"/>
+                </sqlEntity>
+                <join operator="=" allRowsFromSource="true" allRowsFromTarget="false">
+                    <source qbObjectType="DerivedColumn" name="SALES_ORDER_NUM" entityAlias="DerivedTable_5_1">
+                        <queryObject qbObjectType="Column" name="VBELN" displayName="VBELN" dbObjectType="Column" dbObjectName="VBELN" entityAlias="zsapsltvbap01"/>
+                    </source>
+                    <target qbObjectType="Column" name="VBELN" displayName="VBELN" dbObjectType="Column" dbObjectName="VBELN" entityAlias="zsapsltvbak01"/>
+                </join>
+                <sqlField sqlFieldType="Select" displayName="DerivedTable_5_1.*">
+                    <queryObject qbObjectType="AllColumns" name="DerivedTable_5" displayName="DerivedTable_5_1.*" dbObjectType="DerivedTable" dbObjectName="DerivedTable_5" entityAlias="DerivedTable_5_1"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="VKORG">
+                    <queryObject qbObjectType="Column" name="VKORG" displayName="VKORG" dbObjectType="Column" dbObjectName="VKORG" entityAlias="zsapsltvbak01"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="SPART">
+                    <queryObject qbObjectType="Column" name="SPART" displayName="SPART" dbObjectType="Column" dbObjectName="SPART" entityAlias="zsapsltvbak01"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="AUART">
+                    <queryObject qbObjectType="Column" name="AUART" displayName="AUART" dbObjectType="Column" dbObjectName="AUART" entityAlias="zsapsltvbak01"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="VDATU">
+                    <queryObject qbObjectType="Column" name="VDATU" displayName="VDATU" dbObjectType="Column" dbObjectName="VDATU" entityAlias="zsapsltvbak01"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="WAERK">
+                    <queryObject qbObjectType="Column" name="WAERK" displayName="WAERK" dbObjectType="Column" dbObjectName="WAERK" entityAlias="zsapsltvbak01"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="SO_KUNNR : KUNNR" alias="SO_KUNNR">
+                    <queryObject qbObjectType="Column" name="KUNNR" displayName="KUNNR" dbObjectType="Column" dbObjectName="KUNNR" entityAlias="zsapsltvbak01"/>
+                </sqlField>
+            </sheet>
+            <sheet sqlSheetType="DerivedTable" name="DerivedTable_7" title="DerivedTable_7" tabColor="-1" displayIndex="13">
+                <options/>
+                <decks>
+                    <deck id="Select" show="true" bounds="165,5,1360,30"/>
+                    <deck id="Where" show="true" bounds="5,5,155,59"/>
+                    <deck id="GroupBy" show="true" bounds="5,69,155,59"/>
+                    <deck id="Having" show="true" bounds="5,133,155,59"/>
+                    <deck id="OrderBy" show="true" bounds="5,197,155,59"/>
+                    <deck id="Union" show="true" bounds="5,261,155,59"/>
+                    <deck id="IndexManager" show="false" bounds="0,0,0,0"/>
+                </decks>
+                <layout>
+                    <item type="row">
+                        <children>
+                            <item type="column">
+                                <children>
+                                    <item type="widget" key="Where"/>
+                                    <item type="widget" key="GroupBy"/>
+                                    <item type="widget" key="Having"/>
+                                    <item type="widget" key="OrderBy"/>
+                                    <item type="widget" key="Union"/>
+                                </children>
+                            </item>
+                            <item type="column">
+                                <children>
+                                    <item type="widget" key="Select"/>
+                                    <item type="widget" key="main"/>
+                                </children>
+                            </item>
+                        </children>
+                    </item>
+                </layout>
+                <sqlEntity dbObjectType="DerivedTable" name="DerivedTable_6" alias="DerivedTable_6_1" schema="" database="annular-garage-274212" derivedSheet="DerivedTable_6">
+                    <uiProperties showNameOnly="false" explicitStateChange="false" bounds="15,7,175,250"/>
+                </sqlEntity>
+                <sqlEntity dbObjectType="Table" name="zsapsltvbkd01" alias="zsapsltvbkd01" schema="zsapsltdev01" database="sap01-188316">
+                    <uiProperties showNameOnly="false" explicitStateChange="false" bounds="247,7,175,250"/>
+                </sqlEntity>
+                <join operator="=" allRowsFromSource="true" allRowsFromTarget="false">
+                    <source qbObjectType="DerivedColumn" name="VGBEL" entityAlias="DerivedTable_6_1">
+                        <queryObject qbObjectType="DerivedColumn" name="VGBEL" entityAlias="DerivedTable_5_1">
+                            <queryObject qbObjectType="DerivedColumn" name="VGBEL" entityAlias="DerivedTable_3">
+                                <queryObject qbObjectType="DerivedColumn" name="VGBEL" entityAlias="DerivedTable_2">
+                                    <queryObject qbObjectType="DerivedColumn" name="VGBEL" entityAlias="DerivedTable_1">
+                                        <queryObject qbObjectType="Column" name="VGBEL" displayName="VGBEL" dbObjectType="Column" dbObjectName="VGBEL" entityAlias="zsapsltlips02"/>
+                                    </queryObject>
+                                </queryObject>
+                            </queryObject>
+                        </queryObject>
+                    </source>
+                    <target qbObjectType="Column" name="VBELN" displayName="VBELN" dbObjectType="Column" dbObjectName="VBELN" entityAlias="zsapsltvbkd01"/>
+                </join>
+                <sqlField sqlFieldType="Select" displayName="DerivedTable_6_1.*">
+                    <queryObject qbObjectType="AllColumns" name="DerivedTable_6" displayName="DerivedTable_6_1.*" dbObjectType="DerivedTable" dbObjectName="DerivedTable_6" entityAlias="DerivedTable_6_1"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="PRSDT">
+                    <queryObject qbObjectType="Column" name="PRSDT" displayName="PRSDT" dbObjectType="Column" dbObjectName="PRSDT" entityAlias="zsapsltvbkd01"/>
+                </sqlField>
+            </sheet>
+            <sheet sqlSheetType="DerivedTable" name="DerivedTable_8" title="DerivedTable_8" tabColor="-1" displayIndex="12">
+                <options>
+                    <sqlOption sqlFieldType="Select" name="NONE"/>
+                </options>
+                <decks>
+                    <deck id="Select" show="true" bounds="165,5,1360,30"/>
+                    <deck id="Where" show="true" bounds="5,5,155,121"/>
+                    <deck id="GroupBy" show="true" bounds="5,131,155,59"/>
+                    <deck id="Having" show="true" bounds="5,195,155,59"/>
+                    <deck id="OrderBy" show="true" bounds="5,259,155,59"/>
+                    <deck id="Union" show="true" bounds="5,323,155,59"/>
+                    <deck id="IndexManager" show="false" bounds="0,0,0,0"/>
+                </decks>
+                <layout>
+                    <item type="row">
+                        <children>
+                            <item type="column">
+                                <children>
+                                    <item type="widget" key="Where"/>
+                                    <item type="widget" key="GroupBy"/>
+                                    <item type="widget" key="Having"/>
+                                    <item type="widget" key="OrderBy"/>
+                                    <item type="widget" key="Union"/>
+                                </children>
+                            </item>
+                            <item type="column">
+                                <children>
+                                    <item type="widget" key="Select"/>
+                                    <item type="widget" key="main"/>
+                                </children>
+                            </item>
+                        </children>
+                    </item>
+                </layout>
+                <sqlEntity dbObjectType="DerivedTable" name="DerivedTable_7" alias="DerivedTable_7_1" schema="" database="annular-garage-274212" derivedSheet="DerivedTable_7">
+                    <uiProperties showNameOnly="false" explicitStateChange="false" bounds="17,1,175,250"/>
+                </sqlEntity>
+                <sqlEntity dbObjectType="View" name="zvsapslt_dailyexrates01" alias="zvsapslt_dailyexrates01" schema="zsapsltdev01" database="sap01-188316">
+                    <uiProperties showNameOnly="false" explicitStateChange="false" bounds="247,7,175,250"/>
+                </sqlEntity>
+                <join operator="=" allRowsFromSource="false" allRowsFromTarget="false">
+                    <source qbObjectType="DerivedColumn" name="PRSDT" entityAlias="DerivedTable_7_1">
+                        <queryObject qbObjectType="Column" name="PRSDT" displayName="PRSDT" dbObjectType="Column" dbObjectName="PRSDT" entityAlias="zsapsltvbkd01"/>
+                    </source>
+                    <target qbObjectType="Column" name="CALDAY" displayName="CALDAY" dbObjectType="Column" dbObjectName="CALDAY" entityAlias="zvsapslt_dailyexrates01"/>
+                </join>
+                <join operator="=" allRowsFromSource="false" allRowsFromTarget="false">
+                    <source qbObjectType="DerivedColumn" name="WAERK" entityAlias="DerivedTable_7_1">
+                        <queryObject qbObjectType="DerivedColumn" name="WAERK" entityAlias="DerivedTable_6_1">
+                            <queryObject qbObjectType="Column" name="WAERK" displayName="WAERK" dbObjectType="Column" dbObjectName="WAERK" entityAlias="zsapsltvbak01"/>
+                        </queryObject>
+                    </source>
+                    <target qbObjectType="Column" name="from_curr" displayName="from_curr" dbObjectType="Column" dbObjectName="from_curr" entityAlias="zvsapslt_dailyexrates01"/>
+                </join>
+                <sqlField sqlFieldType="Select" displayName="DerivedTable_7_1.*">
+                    <queryObject qbObjectType="AllColumns" name="DerivedTable_7" displayName="DerivedTable_7_1.*" dbObjectType="DerivedTable" dbObjectName="DerivedTable_7" entityAlias="DerivedTable_7_1"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="rate">
+                    <queryObject qbObjectType="Column" name="rate" displayName="rate" dbObjectType="Column" dbObjectName="rate" entityAlias="zvsapslt_dailyexrates01"/>
+                </sqlField>
+                <sqlField sqlFieldType="Where" operator="=" value="AVGRATE" quoteEnabled="true">
+                    <queryObject qbObjectType="Column" name="BPC_RT_TYPE" displayName="BPC_RT_TYPE" dbObjectType="Column" dbObjectName="BPC_RT_TYPE" entityAlias="zvsapslt_dailyexrates01"/>
+                </sqlField>
+                <filterLogic sqlFieldType="Where" filterOperator="AND"/>
+            </sheet>
+            <sheet sqlSheetType="DerivedTable" name="DerivedTable_9" title="DerivedTable_9" tabColor="-1" displayIndex="11">
+                <options/>
+                <decks>
+                    <deck id="Select" show="true" bounds="165,5,1360,30"/>
+                    <deck id="Where" show="true" bounds="5,5,155,59"/>
+                    <deck id="GroupBy" show="true" bounds="5,69,155,59"/>
+                    <deck id="Having" show="true" bounds="5,133,155,59"/>
+                    <deck id="OrderBy" show="true" bounds="5,197,155,59"/>
+                    <deck id="Union" show="true" bounds="5,261,155,59"/>
+                    <deck id="IndexManager" show="false" bounds="0,0,0,0"/>
+                </decks>
+                <layout>
+                    <item type="row">
+                        <children>
+                            <item type="column">
+                                <children>
+                                    <item type="widget" key="Where"/>
+                                    <item type="widget" key="GroupBy"/>
+                                    <item type="widget" key="Having"/>
+                                    <item type="widget" key="OrderBy"/>
+                                    <item type="widget" key="Union"/>
+                                </children>
+                            </item>
+                            <item type="column">
+                                <children>
+                                    <item type="widget" key="Select"/>
+                                    <item type="widget" key="main"/>
+                                </children>
+                            </item>
+                        </children>
+                    </item>
+                </layout>
+                <sqlEntity dbObjectType="DerivedTable" name="DerivedTable_8" alias="DerivedTable_8" schema="" database="annular-garage-274212" derivedSheet="DerivedTable_8">
+                    <uiProperties showNameOnly="false" explicitStateChange="false" bounds="15,7,175,250"/>
+                </sqlEntity>
+                <sqlEntity dbObjectType="Table" name="zsapsltvbpa01" alias="zsapsltvbpa01" schema="zsapsltdev01" database="sap01-188316">
+                    <uiProperties showNameOnly="false" explicitStateChange="false" bounds="247,7,175,250"/>
+                </sqlEntity>
+                <join operator="=" allRowsFromSource="true" allRowsFromTarget="false">
+                    <source qbObjectType="DerivedColumn" name="DELIVERY_NUM" entityAlias="DerivedTable_8">
+                        <queryObject qbObjectType="DerivedColumn" name="DELIVERY_NUM" entityAlias="DerivedTable_7_1">
+                            <queryObject qbObjectType="DerivedColumn" name="DELIVERY_NUM" entityAlias="DerivedTable_6_1">
+                                <queryObject qbObjectType="DerivedColumn" name="DELIVERY_NUM" entityAlias="DerivedTable_5_1">
+                                    <queryObject qbObjectType="DerivedColumn" name="DELIVERY_NUM" entityAlias="DerivedTable_3">
+                                        <queryObject qbObjectType="DerivedColumn" name="DELIVERY_NUM" entityAlias="DerivedTable_2">
+                                            <queryObject qbObjectType="DerivedColumn" name="DELIVERY_NUM" entityAlias="DerivedTable_1">
+                                                <queryObject qbObjectType="Column" name="VBELN" displayName="VBELN" dbObjectType="Column" dbObjectName="VBELN" entityAlias="zsapsltlikp01"/>
+                                            </queryObject>
+                                        </queryObject>
+                                    </queryObject>
+                                </queryObject>
+                            </queryObject>
+                        </queryObject>
+                    </source>
+                    <target qbObjectType="Column" name="VBELN" displayName="VBELN" dbObjectType="Column" dbObjectName="VBELN" entityAlias="zsapsltvbpa01"/>
+                </join>
+                <sqlField sqlFieldType="Select" displayName="DerivedTable_8.*">
+                    <queryObject qbObjectType="AllColumns" name="DerivedTable_8" displayName="DerivedTable_8.*" dbObjectType="DerivedTable" dbObjectName="DerivedTable_8" entityAlias="DerivedTable_8"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="SHIP_TO_COUNTRY : LAND1" alias="SHIP_TO_COUNTRY">
+                    <queryObject qbObjectType="Column" name="LAND1" displayName="LAND1" dbObjectType="Column" dbObjectName="LAND1" entityAlias="zsapsltvbpa01"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="ADRNR">
+                    <queryObject qbObjectType="Column" name="ADRNR" displayName="ADRNR" dbObjectType="Column" dbObjectName="ADRNR" entityAlias="zsapsltvbpa01"/>
+                </sqlField>
+            </sheet>
+            <sheet sqlSheetType="DerivedTable" name="DerivedTable_10" title="DerivedTable_10" displayIndex="10">
+                <options/>
+                <decks>
+                    <deck id="Select" show="true" bounds="165,5,1360,30"/>
+                    <deck id="Where" show="true" bounds="5,5,155,59"/>
+                    <deck id="GroupBy" show="true" bounds="5,69,155,59"/>
+                    <deck id="Having" show="true" bounds="5,133,155,59"/>
+                    <deck id="OrderBy" show="true" bounds="5,197,155,59"/>
+                    <deck id="Union" show="true" bounds="5,261,155,59"/>
+                    <deck id="IndexManager" show="false" bounds="0,0,0,0"/>
+                </decks>
+                <layout>
+                    <item type="row">
+                        <children>
+                            <item type="column">
+                                <children>
+                                    <item type="widget" key="Where"/>
+                                    <item type="widget" key="GroupBy"/>
+                                    <item type="widget" key="Having"/>
+                                    <item type="widget" key="OrderBy"/>
+                                    <item type="widget" key="Union"/>
+                                </children>
+                            </item>
+                            <item type="column">
+                                <children>
+                                    <item type="widget" key="Select"/>
+                                    <item type="widget" key="main"/>
+                                </children>
+                            </item>
+                        </children>
+                    </item>
+                </layout>
+                <sqlEntity dbObjectType="DerivedTable" name="DerivedTable_9" alias="DerivedTable_9" schema="" database="annular-garage-274212" derivedSheet="DerivedTable_9">
+                    <uiProperties showNameOnly="false" explicitStateChange="false" bounds="15,7,175,250"/>
+                </sqlEntity>
+                <sqlEntity dbObjectType="Table" name="zsapsltadrc01" alias="zsapsltadrc01" schema="zsapsltdev01" database="sap01-188316">
+                    <uiProperties showNameOnly="false" explicitStateChange="false" bounds="247,7,175,250"/>
+                </sqlEntity>
+                <join operator="=" allRowsFromSource="true" allRowsFromTarget="false">
+                    <source qbObjectType="DerivedColumn" name="ADRNR" entityAlias="DerivedTable_9">
+                        <queryObject qbObjectType="Column" name="ADRNR" displayName="ADRNR" dbObjectType="Column" dbObjectName="ADRNR" entityAlias="zsapsltvbpa01"/>
+                    </source>
+                    <target qbObjectType="Column" name="ADDRNUMBER" displayName="ADDRNUMBER" dbObjectType="Column" dbObjectName="ADDRNUMBER" entityAlias="zsapsltadrc01"/>
+                </join>
+                <sqlField sqlFieldType="Select" displayName="DerivedTable_9.*">
+                    <queryObject qbObjectType="AllColumns" name="DerivedTable_9" displayName="DerivedTable_9.*" dbObjectType="DerivedTable" dbObjectName="DerivedTable_9" entityAlias="DerivedTable_9"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="SHIP_TO_REGION : REGION" alias="SHIP_TO_REGION">
+                    <queryObject qbObjectType="Column" name="REGION" displayName="REGION" dbObjectType="Column" dbObjectName="REGION" entityAlias="zsapsltadrc01"/>
+                </sqlField>
+            </sheet>
+            <sheet sqlSheetType="DerivedTable" name="DerivedTable_11" title="DerivedTable_11" displayIndex="9">
+                <options/>
+                <decks>
+                    <deck id="Select" show="true" bounds="165,5,1360,30"/>
+                    <deck id="Where" show="true" bounds="5,5,155,59"/>
+                    <deck id="GroupBy" show="true" bounds="5,69,155,59"/>
+                    <deck id="Having" show="true" bounds="5,133,155,59"/>
+                    <deck id="OrderBy" show="true" bounds="5,197,155,59"/>
+                    <deck id="Union" show="true" bounds="5,261,155,59"/>
+                    <deck id="IndexManager" show="false" bounds="0,0,0,0"/>
+                </decks>
+                <layout>
+                    <item type="row">
+                        <children>
+                            <item type="column">
+                                <children>
+                                    <item type="widget" key="Where"/>
+                                    <item type="widget" key="GroupBy"/>
+                                    <item type="widget" key="Having"/>
+                                    <item type="widget" key="OrderBy"/>
+                                    <item type="widget" key="Union"/>
+                                </children>
+                            </item>
+                            <item type="column">
+                                <children>
+                                    <item type="widget" key="Select"/>
+                                    <item type="widget" key="main"/>
+                                </children>
+                            </item>
+                        </children>
+                    </item>
+                </layout>
+                <sqlEntity dbObjectType="DerivedTable" name="DerivedTable_10" alias="DerivedTable_10" schema="" database="annular-garage-274212" derivedSheet="DerivedTable_10">
+                    <uiProperties showNameOnly="false" explicitStateChange="false" bounds="15,7,175,250"/>
+                </sqlEntity>
+                <sqlEntity dbObjectType="Table" name="zsapsltvbep01" alias="zsapsltvbep01" schema="zsapsltdev01" database="sap01-188316">
+                    <uiProperties showNameOnly="false" explicitStateChange="false" bounds="247,7,175,250"/>
+                </sqlEntity>
+                <join operator="=" allRowsFromSource="true" allRowsFromTarget="false">
+                    <source qbObjectType="DerivedColumn" name="SALES_ORDER_NUM" entityAlias="DerivedTable_10">
+                        <queryObject qbObjectType="DerivedColumn" name="SALES_ORDER_NUM" entityAlias="DerivedTable_9">
+                            <queryObject qbObjectType="DerivedColumn" name="SALES_ORDER_NUM" entityAlias="DerivedTable_8">
+                                <queryObject qbObjectType="DerivedColumn" name="SALES_ORDER_NUM" entityAlias="DerivedTable_7_1">
+                                    <queryObject qbObjectType="DerivedColumn" name="SALES_ORDER_NUM" entityAlias="DerivedTable_6_1">
+                                        <queryObject qbObjectType="DerivedColumn" name="SALES_ORDER_NUM" entityAlias="DerivedTable_5_1">
+                                            <queryObject qbObjectType="Column" name="VBELN" displayName="VBELN" dbObjectType="Column" dbObjectName="VBELN" entityAlias="zsapsltvbap01"/>
+                                        </queryObject>
+                                    </queryObject>
+                                </queryObject>
+                            </queryObject>
+                        </queryObject>
+                    </source>
+                    <target qbObjectType="Column" name="VBELN" displayName="VBELN" dbObjectType="Column" dbObjectName="VBELN" entityAlias="zsapsltvbep01"/>
+                </join>
+                <join operator="=" allRowsFromSource="true" allRowsFromTarget="false">
+                    <source qbObjectType="DerivedColumn" name="SALES_ORDER_ITEM" entityAlias="DerivedTable_10">
+                        <queryObject qbObjectType="DerivedColumn" name="SALES_ORDER_ITEM" entityAlias="DerivedTable_9">
+                            <queryObject qbObjectType="DerivedColumn" name="SALES_ORDER_ITEM" entityAlias="DerivedTable_8">
+                                <queryObject qbObjectType="DerivedColumn" name="SALES_ORDER_ITEM" entityAlias="DerivedTable_7_1">
+                                    <queryObject qbObjectType="DerivedColumn" name="SALES_ORDER_ITEM" entityAlias="DerivedTable_6_1">
+                                        <queryObject qbObjectType="DerivedColumn" name="SALES_ORDER_ITEM" entityAlias="DerivedTable_5_1">
+                                            <queryObject qbObjectType="Column" name="POSNR" displayName="POSNR" dbObjectType="Column" dbObjectName="POSNR" entityAlias="zsapsltvbap01"/>
+                                        </queryObject>
+                                    </queryObject>
+                                </queryObject>
+                            </queryObject>
+                        </queryObject>
+                    </source>
+                    <target qbObjectType="Column" name="POSNR" displayName="POSNR" dbObjectType="Column" dbObjectName="POSNR" entityAlias="zsapsltvbep01"/>
+                </join>
+                <sqlField sqlFieldType="Select" displayName="DerivedTable_10.*">
+                    <queryObject qbObjectType="AllColumns" name="DerivedTable_10" displayName="DerivedTable_10.*" dbObjectType="DerivedTable" dbObjectName="DerivedTable_10" entityAlias="DerivedTable_10"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="MATERIAL_AVAIL_DATE : MBDAT" alias="MATERIAL_AVAIL_DATE">
+                    <queryObject qbObjectType="Column" name="MBDAT" displayName="MBDAT" dbObjectType="Column" dbObjectName="MBDAT" entityAlias="zsapsltvbep01"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="PLANNED_GI_DATE : WADAT" alias="PLANNED_GI_DATE">
+                    <queryObject qbObjectType="Column" name="WADAT" displayName="WADAT" dbObjectType="Column" dbObjectName="WADAT" entityAlias="zsapsltvbep01"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="DeliveryDate_FIRST_NEGO : EDATU" alias="DeliveryDate_FIRST_NEGO">
+                    <queryObject qbObjectType="Column" name="EDATU" displayName="EDATU" dbObjectType="Column" dbObjectName="EDATU" entityAlias="zsapsltvbep01"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="Schedule_Line : ETENR" alias="Schedule_Line">
+                    <queryObject qbObjectType="Column" name="ETENR" displayName="ETENR" dbObjectType="Column" dbObjectName="ETENR" entityAlias="zsapsltvbep01"/>
+                </sqlField>
+            </sheet>
+            <sheet sqlSheetType="DerivedTable" name="DerivedTable_12" title="DerivedTable_12" displayIndex="8">
+                <options/>
+                <decks>
+                    <deck id="Select" show="true" bounds="165,5,1360,30"/>
+                    <deck id="Where" show="true" bounds="5,5,155,59"/>
+                    <deck id="GroupBy" show="true" bounds="5,69,155,59"/>
+                    <deck id="Having" show="true" bounds="5,133,155,59"/>
+                    <deck id="OrderBy" show="true" bounds="5,197,155,59"/>
+                    <deck id="Union" show="true" bounds="5,261,155,59"/>
+                    <deck id="IndexManager" show="false" bounds="0,0,0,0"/>
+                </decks>
+                <layout>
+                    <item type="row">
+                        <children>
+                            <item type="column">
+                                <children>
+                                    <item type="widget" key="Where"/>
+                                    <item type="widget" key="GroupBy"/>
+                                    <item type="widget" key="Having"/>
+                                    <item type="widget" key="OrderBy"/>
+                                    <item type="widget" key="Union"/>
+                                </children>
+                            </item>
+                            <item type="column">
+                                <children>
+                                    <item type="widget" key="Select"/>
+                                    <item type="widget" key="main"/>
+                                </children>
+                            </item>
+                        </children>
+                    </item>
+                </layout>
+                <sqlEntity dbObjectType="DerivedTable" name="DerivedTable_11" alias="DerivedTable_11_1" schema="" database="annular-garage-274212" derivedSheet="DerivedTable_11">
+                    <uiProperties showNameOnly="false" explicitStateChange="false" bounds="15,7,175,250"/>
+                </sqlEntity>
+                <sqlEntity dbObjectType="Table" name="zsapslt_otssprofitmap01" alias="zsapslt_otssprofitmap01_1" schema="zsapsltdev01" database="sap01-188316">
+                    <uiProperties showNameOnly="false" explicitStateChange="false" bounds="247,7,175,250"/>
+                </sqlEntity>
+                <join operator="" customExpression="LTRIM(`DerivedTable_11_1`.`PRCTR`,'0') = `zsapslt_otssprofitmap01_1`.`PROFIT_CENTER`" customExpressionResetOperator="=" allRowsFromSource="true" allRowsFromTarget="false">
+                    <source qbObjectType="DerivedColumn" name="PRCTR" entityAlias="DerivedTable_11_1">
+                        <queryObject qbObjectType="DerivedColumn" name="PRCTR" entityAlias="DerivedTable_10">
+                            <queryObject qbObjectType="DerivedColumn" name="PRCTR" entityAlias="DerivedTable_9">
+                                <queryObject qbObjectType="DerivedColumn" name="PRCTR" entityAlias="DerivedTable_8">
+                                    <queryObject qbObjectType="DerivedColumn" name="PRCTR" entityAlias="DerivedTable_7_1">
+                                        <queryObject qbObjectType="DerivedColumn" name="PRCTR" entityAlias="DerivedTable_6_1">
+                                            <queryObject qbObjectType="DerivedColumn" name="PRCTR" entityAlias="DerivedTable_5_1">
+                                                <queryObject qbObjectType="DerivedColumn" name="PRCTR" entityAlias="DerivedTable_3">
+                                                    <queryObject qbObjectType="DerivedColumn" name="PRCTR" entityAlias="DerivedTable_2">
+                                                        <queryObject qbObjectType="DerivedColumn" name="PRCTR" entityAlias="DerivedTable_1">
+                                                            <queryObject qbObjectType="Column" name="PRCTR" displayName="PRCTR" dbObjectType="Column" dbObjectName="PRCTR" entityAlias="zsapsltlips02"/>
+                                                        </queryObject>
+                                                    </queryObject>
+                                                </queryObject>
+                                            </queryObject>
+                                        </queryObject>
+                                    </queryObject>
+                                </queryObject>
+                            </queryObject>
+                        </queryObject>
+                    </source>
+                    <target qbObjectType="Column" name="PROFIT_CENTER" displayName="PROFIT_CENTER" dbObjectType="Column" dbObjectName="PROFIT_CENTER" entityAlias="zsapslt_otssprofitmap01_1"/>
+                </join>
+                <sqlField sqlFieldType="Select" displayName="DerivedTable_11_1.*">
+                    <queryObject qbObjectType="AllColumns" name="DerivedTable_11" displayName="DerivedTable_11_1.*" dbObjectType="DerivedTable" dbObjectName="DerivedTable_11" entityAlias="DerivedTable_11_1"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="PROFIT_CENTER_DESC : Description" alias="PROFIT_CENTER_DESC">
+                    <queryObject qbObjectType="Column" name="Description" displayName="Description" dbObjectType="Column" dbObjectName="Description" entityAlias="zsapslt_otssprofitmap01_1"/>
+                </sqlField>
+            </sheet>
+            <sheet sqlSheetType="DerivedTable" name="DerivedTable_13" title="DerivedTable_13" displayIndex="7">
+                <options/>
+                <decks>
+                    <deck id="Select" show="true" bounds="165,5,1360,30"/>
+                    <deck id="Where" show="true" bounds="5,5,155,121"/>
+                    <deck id="GroupBy" show="true" bounds="5,131,155,59"/>
+                    <deck id="Having" show="true" bounds="5,195,155,59"/>
+                    <deck id="OrderBy" show="true" bounds="5,259,155,59"/>
+                    <deck id="Union" show="true" bounds="5,323,155,59"/>
+                    <deck id="IndexManager" show="false" bounds="0,0,0,0"/>
+                </decks>
+                <layout>
+                    <item type="row">
+                        <children>
+                            <item type="column">
+                                <children>
+                                    <item type="widget" key="Where"/>
+                                    <item type="widget" key="GroupBy"/>
+                                    <item type="widget" key="Having"/>
+                                    <item type="widget" key="OrderBy"/>
+                                    <item type="widget" key="Union"/>
+                                </children>
+                            </item>
+                            <item type="column">
+                                <children>
+                                    <item type="widget" key="Select"/>
+                                    <item type="widget" key="main"/>
+                                </children>
+                            </item>
+                        </children>
+                    </item>
+                </layout>
+                <sqlEntity dbObjectType="DerivedTable" name="DerivedTable_12" alias="DerivedTable_12" schema="" database="annular-garage-274212" derivedSheet="DerivedTable_12">
+                    <uiProperties showNameOnly="false" explicitStateChange="false" bounds="15,7,175,250"/>
+                </sqlEntity>
+                <sqlEntity dbObjectType="Table" name="zsapsltt151t01" alias="zsapsltt151t01" schema="zsapsltdev01" database="sap01-188316">
+                    <uiProperties showNameOnly="false" explicitStateChange="false" bounds="247,7,175,250"/>
+                </sqlEntity>
+                <join operator="=" allRowsFromSource="true" allRowsFromTarget="false">
+                    <source qbObjectType="DerivedColumn" name="KDGRP" entityAlias="DerivedTable_12">
+                        <queryObject qbObjectType="DerivedColumn" name="KDGRP" entityAlias="DerivedTable_11_1">
+                            <queryObject qbObjectType="DerivedColumn" name="KDGRP" entityAlias="DerivedTable_10">
+                                <queryObject qbObjectType="DerivedColumn" name="KDGRP" entityAlias="DerivedTable_9">
+                                    <queryObject qbObjectType="DerivedColumn" name="KDGRP" entityAlias="DerivedTable_8">
+                                        <queryObject qbObjectType="DerivedColumn" name="KDGRP" entityAlias="DerivedTable_7_1">
+                                            <queryObject qbObjectType="DerivedColumn" name="KDGRP" entityAlias="DerivedTable_6_1">
+                                                <queryObject qbObjectType="DerivedColumn" name="KDGRP" entityAlias="DerivedTable_5_1">
+                                                    <queryObject qbObjectType="DerivedColumn" name="KDGRP" entityAlias="DerivedTable_3">
+                                                        <queryObject qbObjectType="DerivedColumn" name="KDGRP" entityAlias="DerivedTable_2">
+                                                            <queryObject qbObjectType="DerivedColumn" name="KDGRP" entityAlias="DerivedTable_1">
+                                                                <queryObject qbObjectType="Column" name="KDGRP" displayName="KDGRP" dbObjectType="Column" dbObjectName="KDGRP" entityAlias="zsapsltlikp01"/>
+                                                            </queryObject>
+                                                        </queryObject>
+                                                    </queryObject>
+                                                </queryObject>
+                                            </queryObject>
+                                        </queryObject>
+                                    </queryObject>
+                                </queryObject>
+                            </queryObject>
+                        </queryObject>
+                    </source>
+                    <target qbObjectType="Column" name="KDGRP" displayName="KDGRP" dbObjectType="Column" dbObjectName="KDGRP" entityAlias="zsapsltt151t01"/>
+                </join>
+                <sqlField sqlFieldType="Select" displayName="DerivedTable_12.*">
+                    <queryObject qbObjectType="AllColumns" name="DerivedTable_12" displayName="DerivedTable_12.*" dbObjectType="DerivedTable" dbObjectName="DerivedTable_12" entityAlias="DerivedTable_12"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="CUSTOMER_GROUP_NAME : KTEXT" alias="CUSTOMER_GROUP_NAME">
+                    <queryObject qbObjectType="Column" name="KTEXT" displayName="KTEXT" dbObjectType="Column" dbObjectName="KTEXT" entityAlias="zsapsltt151t01"/>
+                </sqlField>
+                <sqlField sqlFieldType="Where" operator="=" value="E" quoteEnabled="true">
+                    <queryObject qbObjectType="Column" name="SPRAS" displayName="SPRAS" dbObjectType="Column" dbObjectName="SPRAS" entityAlias="zsapsltt151t01"/>
+                </sqlField>
+                <filterLogic sqlFieldType="Where" filterOperator="AND"/>
+            </sheet>
+            <sheet sqlSheetType="DerivedTable" name="DerivedTable_14" title="DerivedTable_14" displayIndex="6">
+                <options/>
+                <decks>
+                    <deck id="Select" show="true" bounds="165,5,1360,30"/>
+                    <deck id="Where" show="true" bounds="5,5,155,121"/>
+                    <deck id="GroupBy" show="true" bounds="5,131,155,59"/>
+                    <deck id="Having" show="true" bounds="5,195,155,59"/>
+                    <deck id="OrderBy" show="true" bounds="5,259,155,59"/>
+                    <deck id="Union" show="true" bounds="5,323,155,59"/>
+                    <deck id="IndexManager" show="false" bounds="0,0,0,0"/>
+                </decks>
+                <layout>
+                    <item type="row">
+                        <children>
+                            <item type="column">
+                                <children>
+                                    <item type="widget" key="Where"/>
+                                    <item type="widget" key="GroupBy"/>
+                                    <item type="widget" key="Having"/>
+                                    <item type="widget" key="OrderBy"/>
+                                    <item type="widget" key="Union"/>
+                                </children>
+                            </item>
+                            <item type="column">
+                                <children>
+                                    <item type="widget" key="Select"/>
+                                    <item type="widget" key="main"/>
+                                </children>
+                            </item>
+                        </children>
+                    </item>
+                </layout>
+                <sqlEntity dbObjectType="DerivedTable" name="DerivedTable_13" alias="DerivedTable_13_1" schema="" database="annular-garage-274212" derivedSheet="DerivedTable_13">
+                    <uiProperties showNameOnly="false" explicitStateChange="false" bounds="15,7,175,250"/>
+                </sqlEntity>
+                <sqlEntity dbObjectType="Table" name="zsapslttvstt01" alias="zsapslttvstt01" schema="zsapsltdev01" database="sap01-188316">
+                    <uiProperties showNameOnly="false" explicitStateChange="false" bounds="247,7,175,250"/>
+                </sqlEntity>
+                <join operator="=" allRowsFromSource="true" allRowsFromTarget="false">
+                    <source qbObjectType="DerivedColumn" name="VSTEL" entityAlias="DerivedTable_13_1">
+                        <queryObject qbObjectType="DerivedColumn" name="VSTEL" entityAlias="DerivedTable_12">
+                            <queryObject qbObjectType="DerivedColumn" name="VSTEL" entityAlias="DerivedTable_11_1">
+                                <queryObject qbObjectType="DerivedColumn" name="VSTEL" entityAlias="DerivedTable_10">
+                                    <queryObject qbObjectType="DerivedColumn" name="VSTEL" entityAlias="DerivedTable_9">
+                                        <queryObject qbObjectType="DerivedColumn" name="VSTEL" entityAlias="DerivedTable_8">
+                                            <queryObject qbObjectType="DerivedColumn" name="VSTEL" entityAlias="DerivedTable_7_1">
+                                                <queryObject qbObjectType="DerivedColumn" name="VSTEL" entityAlias="DerivedTable_6_1">
+                                                    <queryObject qbObjectType="DerivedColumn" name="VSTEL" entityAlias="DerivedTable_5_1">
+                                                        <queryObject qbObjectType="DerivedColumn" name="VSTEL" entityAlias="DerivedTable_3">
+                                                            <queryObject qbObjectType="DerivedColumn" name="VSTEL" entityAlias="DerivedTable_2">
+                                                                <queryObject qbObjectType="DerivedColumn" name="VSTEL" entityAlias="DerivedTable_1">
+                                                                    <queryObject qbObjectType="Column" name="VSTEL" displayName="VSTEL" dbObjectType="Column" dbObjectName="VSTEL" entityAlias="zsapsltlikp01"/>
+                                                                </queryObject>
+                                                            </queryObject>
+                                                        </queryObject>
+                                                    </queryObject>
+                                                </queryObject>
+                                            </queryObject>
+                                        </queryObject>
+                                    </queryObject>
+                                </queryObject>
+                            </queryObject>
+                        </queryObject>
+                    </source>
+                    <target qbObjectType="Column" name="VSTEL" displayName="VSTEL" dbObjectType="Column" dbObjectName="VSTEL" entityAlias="zsapslttvstt01"/>
+                </join>
+                <sqlField sqlFieldType="Select" displayName="DerivedTable_13_1.*">
+                    <queryObject qbObjectType="AllColumns" name="DerivedTable_13" displayName="DerivedTable_13_1.*" dbObjectType="DerivedTable" dbObjectName="DerivedTable_13" entityAlias="DerivedTable_13_1"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="Shipping_Point_Desc : VTEXT" alias="Shipping_Point_Desc">
+                    <queryObject qbObjectType="Column" name="VTEXT" displayName="VTEXT" dbObjectType="Column" dbObjectName="VTEXT" entityAlias="zsapslttvstt01"/>
+                </sqlField>
+                <sqlField sqlFieldType="Where" operator="=" value="E" quoteEnabled="true">
+                    <queryObject qbObjectType="Column" name="SPRAS" displayName="SPRAS" dbObjectType="Column" dbObjectName="SPRAS" entityAlias="zsapslttvstt01"/>
+                </sqlField>
+                <filterLogic sqlFieldType="Where" filterOperator="AND"/>
+            </sheet>
+            <sheet sqlSheetType="DerivedTable" name="DerivedTable_15" title="DerivedTable_15" displayIndex="5">
+                <options/>
+                <decks>
+                    <deck id="Select" show="true" bounds="165,5,1360,30"/>
+                    <deck id="Where" show="true" bounds="5,5,155,121"/>
+                    <deck id="GroupBy" show="true" bounds="5,131,155,59"/>
+                    <deck id="Having" show="true" bounds="5,195,155,59"/>
+                    <deck id="OrderBy" show="true" bounds="5,259,155,59"/>
+                    <deck id="Union" show="true" bounds="5,323,155,59"/>
+                    <deck id="IndexManager" show="false" bounds="0,0,0,0"/>
+                </decks>
+                <layout>
+                    <item type="row">
+                        <children>
+                            <item type="column">
+                                <children>
+                                    <item type="widget" key="Where"/>
+                                    <item type="widget" key="GroupBy"/>
+                                    <item type="widget" key="Having"/>
+                                    <item type="widget" key="OrderBy"/>
+                                    <item type="widget" key="Union"/>
+                                </children>
+                            </item>
+                            <item type="column">
+                                <children>
+                                    <item type="widget" key="Select"/>
+                                    <item type="widget" key="main"/>
+                                </children>
+                            </item>
+                        </children>
+                    </item>
+                </layout>
+                <sqlEntity dbObjectType="DerivedTable" name="DerivedTable_14" alias="DerivedTable_14_1" schema="" database="annular-garage-274212" derivedSheet="DerivedTable_14">
+                    <uiProperties showNameOnly="false" explicitStateChange="false" bounds="15,7,175,250"/>
+                </sqlEntity>
+                <sqlEntity dbObjectType="Table" name="zsapslttvsbt01" alias="zsapslttvsbt01" schema="zsapsltdev01" database="sap01-188316">
+                    <uiProperties showNameOnly="false" explicitStateChange="false" bounds="247,7,175,250"/>
+                </sqlEntity>
+                <join operator="=" allRowsFromSource="true" allRowsFromTarget="false">
+                    <source qbObjectType="DerivedColumn" name="VSBED" entityAlias="DerivedTable_14_1">
+                        <queryObject qbObjectType="DerivedColumn" name="VSBED" entityAlias="DerivedTable_13_1">
+                            <queryObject qbObjectType="DerivedColumn" name="VSBED" entityAlias="DerivedTable_12">
+                                <queryObject qbObjectType="DerivedColumn" name="VSBED" entityAlias="DerivedTable_11_1">
+                                    <queryObject qbObjectType="DerivedColumn" name="VSBED" entityAlias="DerivedTable_10">
+                                        <queryObject qbObjectType="DerivedColumn" name="VSBED" entityAlias="DerivedTable_9">
+                                            <queryObject qbObjectType="DerivedColumn" name="VSBED" entityAlias="DerivedTable_8">
+                                                <queryObject qbObjectType="DerivedColumn" name="VSBED" entityAlias="DerivedTable_7_1">
+                                                    <queryObject qbObjectType="DerivedColumn" name="VSBED" entityAlias="DerivedTable_6_1">
+                                                        <queryObject qbObjectType="DerivedColumn" name="VSBED" entityAlias="DerivedTable_5_1">
+                                                            <queryObject qbObjectType="DerivedColumn" name="VSBED" entityAlias="DerivedTable_3">
+                                                                <queryObject qbObjectType="DerivedColumn" name="VSBED" entityAlias="DerivedTable_2">
+                                                                    <queryObject qbObjectType="DerivedColumn" name="VSBED" entityAlias="DerivedTable_1">
+                                                                        <queryObject qbObjectType="Column" name="VSBED" displayName="VSBED" dbObjectType="Column" dbObjectName="VSBED" entityAlias="zsapsltlikp01"/>
+                                                                    </queryObject>
+                                                                </queryObject>
+                                                            </queryObject>
+                                                        </queryObject>
+                                                    </queryObject>
+                                                </queryObject>
+                                            </queryObject>
+                                        </queryObject>
+                                    </queryObject>
+                                </queryObject>
+                            </queryObject>
+                        </queryObject>
+                    </source>
+                    <target qbObjectType="Column" name="VSBED" displayName="VSBED" dbObjectType="Column" dbObjectName="VSBED" entityAlias="zsapslttvsbt01"/>
+                </join>
+                <sqlField sqlFieldType="Select" displayName="DerivedTable_14_1.*">
+                    <queryObject qbObjectType="AllColumns" name="DerivedTable_14" displayName="DerivedTable_14_1.*" dbObjectType="DerivedTable" dbObjectName="DerivedTable_14" entityAlias="DerivedTable_14_1"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="SHIPPING_CONDITIONS_DESC : VTEXT" alias="SHIPPING_CONDITIONS_DESC">
+                    <queryObject qbObjectType="Column" name="VTEXT" displayName="VTEXT" dbObjectType="Column" dbObjectName="VTEXT" entityAlias="zsapslttvsbt01"/>
+                </sqlField>
+                <sqlField sqlFieldType="Where" operator="=" value="E" quoteEnabled="true">
+                    <queryObject qbObjectType="Column" name="SPRAS" displayName="SPRAS" dbObjectType="Column" dbObjectName="SPRAS" entityAlias="zsapslttvsbt01"/>
+                </sqlField>
+                <filterLogic sqlFieldType="Where" filterOperator="AND"/>
+            </sheet>
+            <sheet sqlSheetType="DerivedTable" name="DerivedTable_16" title="DerivedTable_16" tabColor="-1" displayIndex="4">
+                <options/>
+                <decks>
+                    <deck id="Select" show="true" bounds="165,5,1360,30"/>
+                    <deck id="Where" show="true" bounds="5,5,155,121"/>
+                    <deck id="GroupBy" show="true" bounds="5,131,155,59"/>
+                    <deck id="Having" show="true" bounds="5,195,155,59"/>
+                    <deck id="OrderBy" show="true" bounds="5,259,155,59"/>
+                    <deck id="Union" show="true" bounds="5,323,155,59"/>
+                    <deck id="IndexManager" show="false" bounds="0,0,0,0"/>
+                </decks>
+                <layout>
+                    <item type="row">
+                        <children>
+                            <item type="column">
+                                <children>
+                                    <item type="widget" key="Where"/>
+                                    <item type="widget" key="GroupBy"/>
+                                    <item type="widget" key="Having"/>
+                                    <item type="widget" key="OrderBy"/>
+                                    <item type="widget" key="Union"/>
+                                </children>
+                            </item>
+                            <item type="column">
+                                <children>
+                                    <item type="widget" key="Select"/>
+                                    <item type="widget" key="main"/>
+                                </children>
+                            </item>
+                        </children>
+                    </item>
+                </layout>
+                <sqlEntity dbObjectType="DerivedTable" name="DerivedTable_15" alias="DerivedTable_15" schema="" database="annular-garage-274212" derivedSheet="DerivedTable_15">
+                    <uiProperties showNameOnly="false" explicitStateChange="false" bounds="15,7,175,250"/>
+                </sqlEntity>
+                <sqlEntity dbObjectType="Table" name="zsapslttsege01" alias="zsapslttsege01" schema="zsapsltdev01" database="sap01-188316">
+                    <uiProperties showNameOnly="false" explicitStateChange="false" bounds="247,7,175,250"/>
+                </sqlEntity>
+                <join operator="=" allRowsFromSource="true" allRowsFromTarget="false">
+                    <source qbObjectType="DerivedColumn" name="HANDLE" entityAlias="DerivedTable_15">
+                        <queryObject qbObjectType="DerivedColumn" name="HANDLE" entityAlias="DerivedTable_14_1">
+                            <queryObject qbObjectType="DerivedColumn" name="HANDLE" entityAlias="DerivedTable_13_1">
+                                <queryObject qbObjectType="DerivedColumn" name="HANDLE" entityAlias="DerivedTable_12">
+                                    <queryObject qbObjectType="DerivedColumn" name="HANDLE" entityAlias="DerivedTable_11_1">
+                                        <queryObject qbObjectType="DerivedColumn" name="HANDLE" entityAlias="DerivedTable_10">
+                                            <queryObject qbObjectType="DerivedColumn" name="HANDLE" entityAlias="DerivedTable_9">
+                                                <queryObject qbObjectType="DerivedColumn" name="HANDLE" entityAlias="DerivedTable_8">
+                                                    <queryObject qbObjectType="DerivedColumn" name="HANDLE" entityAlias="DerivedTable_7_1">
+                                                        <queryObject qbObjectType="DerivedColumn" name="HANDLE" entityAlias="DerivedTable_6_1">
+                                                            <queryObject qbObjectType="DerivedColumn" name="HANDLE" entityAlias="DerivedTable_5_1">
+                                                                <queryObject qbObjectType="DerivedColumn" name="HANDLE" entityAlias="DerivedTable_3">
+                                                                    <queryObject qbObjectType="DerivedColumn" name="HANDLE" entityAlias="DerivedTable_2">
+                                                                        <queryObject qbObjectType="DerivedColumn" name="HANDLE" entityAlias="DerivedTable_1">
+                                                                            <queryObject qbObjectType="Column" name="HANDLE" displayName="HANDLE" dbObjectType="Column" dbObjectName="HANDLE" entityAlias="zsapsltlikp01"/>
+                                                                        </queryObject>
+                                                                    </queryObject>
+                                                                </queryObject>
+                                                            </queryObject>
+                                                        </queryObject>
+                                                    </queryObject>
+                                                </queryObject>
+                                            </queryObject>
+                                        </queryObject>
+                                    </queryObject>
+                                </queryObject>
+                            </queryObject>
+                        </queryObject>
+                    </source>
+                    <target qbObjectType="Column" name="HEAD_HDL" displayName="HEAD_HDL" dbObjectType="Column" dbObjectName="HEAD_HDL" entityAlias="zsapslttsege01"/>
+                </join>
+                <sqlField sqlFieldType="Select" displayName="DerivedTable_15.*">
+                    <queryObject qbObjectType="AllColumns" name="DerivedTable_15" displayName="DerivedTable_15.*" dbObjectType="DerivedTable" dbObjectName="DerivedTable_15" entityAlias="DerivedTable_15"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="TIME_EVENT_DELIVERY : EVEN_TSTTO" alias="TIME_EVENT_DELIVERY">
+                    <queryObject qbObjectType="Column" name="EVEN_TSTTO" displayName="EVEN_TSTTO" dbObjectType="Column" dbObjectName="EVEN_TSTTO" entityAlias="zsapslttsege01"/>
+                </sqlField>
+                <sqlField sqlFieldType="Where" operator="=" value="Y030M0003" quoteEnabled="true">
+                    <queryObject qbObjectType="Column" name="EVEN" displayName="EVEN" dbObjectType="Column" dbObjectName="EVEN" entityAlias="zsapslttsege01"/>
+                </sqlField>
+                <filterLogic sqlFieldType="Where" filterOperator="AND"/>
+            </sheet>
+            <sheet sqlSheetType="Main" name="Main" title="Main" tabColor="-1" displayIndex="0">
+                <options/>
+                <decks>
+                    <deck id="Select" show="true" bounds="165,5,1360,30"/>
+                    <deck id="Where" show="true" bounds="5,5,155,59"/>
+                    <deck id="GroupBy" show="true" bounds="5,69,155,59"/>
+                    <deck id="Having" show="true" bounds="5,133,155,59"/>
+                    <deck id="OrderBy" show="true" bounds="5,197,155,59"/>
+                    <deck id="Union" show="true" bounds="5,261,155,59"/>
+                    <deck id="IndexManager" show="false" bounds="0,0,0,0"/>
+                </decks>
+                <layout>
+                    <item type="row">
+                        <children>
+                            <item type="column">
+                                <children>
+                                    <item type="widget" key="Where"/>
+                                    <item type="widget" key="GroupBy"/>
+                                    <item type="widget" key="Having"/>
+                                    <item type="widget" key="OrderBy"/>
+                                    <item type="widget" key="Union"/>
+                                </children>
+                            </item>
+                            <item type="column">
+                                <children>
+                                    <item type="widget" key="Select"/>
+                                    <item type="widget" key="main"/>
+                                </children>
+                            </item>
+                        </children>
+                    </item>
+                </layout>
+                <sqlEntity dbObjectType="DerivedTable" name="DerivedTable_16" alias="DerivedTable_16" schema="" database="annular-garage-274212" derivedSheet="DerivedTable_16">
+                    <uiProperties showNameOnly="false" explicitStateChange="false" bounds="15,7,175,250"/>
+                </sqlEntity>
+            </sheet>
+            <sheet sqlSheetType="DerivedTable" name="DerivedTable_17" title="DerivedTable_17" displayIndex="3">
+                <options/>
+                <decks>
+                    <deck id="Select" show="true" bounds="165,5,1360,30"/>
+                    <deck id="Where" show="true" bounds="5,5,155,59"/>
+                    <deck id="GroupBy" show="true" bounds="5,69,155,59"/>
+                    <deck id="Having" show="true" bounds="5,133,155,59"/>
+                    <deck id="OrderBy" show="true" bounds="5,197,155,59"/>
+                    <deck id="Union" show="true" bounds="5,261,155,59"/>
+                    <deck id="IndexManager" show="false" bounds="0,0,0,0"/>
+                </decks>
+                <layout>
+                    <item type="row">
+                        <children>
+                            <item type="column">
+                                <children>
+                                    <item type="widget" key="Where"/>
+                                    <item type="widget" key="GroupBy"/>
+                                    <item type="widget" key="Having"/>
+                                    <item type="widget" key="OrderBy"/>
+                                    <item type="widget" key="Union"/>
+                                </children>
+                            </item>
+                            <item type="column">
+                                <children>
+                                    <item type="widget" key="Select"/>
+                                    <item type="widget" key="main"/>
+                                </children>
+                            </item>
+                        </children>
+                    </item>
+                </layout>
+                <sqlEntity dbObjectType="DerivedTable" name="DerivedTable_16" alias="DerivedTable_16_1" schema="" database="annular-garage-274212" derivedSheet="DerivedTable_16">
+                    <uiProperties showNameOnly="false" explicitStateChange="false" bounds="15,7,175,250"/>
+                </sqlEntity>
+                <sqlEntity dbObjectType="Table" name="zsapsltvttp01" alias="zsapsltvttp01" schema="zsapsltdev01" database="sap01-188316">
+                    <uiProperties showNameOnly="false" explicitStateChange="false" bounds="247,7,175,250"/>
+                </sqlEntity>
+                <join operator="=" allRowsFromSource="true" allRowsFromTarget="false">
+                    <source qbObjectType="DerivedColumn" name="DELIVERY_NUM" entityAlias="DerivedTable_16_1">
+                        <queryObject qbObjectType="DerivedColumn" name="DELIVERY_NUM" entityAlias="DerivedTable_15">
+                            <queryObject qbObjectType="DerivedColumn" name="DELIVERY_NUM" entityAlias="DerivedTable_14_1">
+                                <queryObject qbObjectType="DerivedColumn" name="DELIVERY_NUM" entityAlias="DerivedTable_13_1">
+                                    <queryObject qbObjectType="DerivedColumn" name="DELIVERY_NUM" entityAlias="DerivedTable_12">
+                                        <queryObject qbObjectType="DerivedColumn" name="DELIVERY_NUM" entityAlias="DerivedTable_11_1">
+                                            <queryObject qbObjectType="DerivedColumn" name="DELIVERY_NUM" entityAlias="DerivedTable_10">
+                                                <queryObject qbObjectType="DerivedColumn" name="DELIVERY_NUM" entityAlias="DerivedTable_9">
+                                                    <queryObject qbObjectType="DerivedColumn" name="DELIVERY_NUM" entityAlias="DerivedTable_8">
+                                                        <queryObject qbObjectType="DerivedColumn" name="DELIVERY_NUM" entityAlias="DerivedTable_7_1">
+                                                            <queryObject qbObjectType="DerivedColumn" name="DELIVERY_NUM" entityAlias="DerivedTable_6_1">
+                                                                <queryObject qbObjectType="DerivedColumn" name="DELIVERY_NUM" entityAlias="DerivedTable_5_1">
+                                                                    <queryObject qbObjectType="DerivedColumn" name="DELIVERY_NUM" entityAlias="DerivedTable_3">
+                                                                        <queryObject qbObjectType="DerivedColumn" name="DELIVERY_NUM" entityAlias="DerivedTable_2">
+                                                                            <queryObject qbObjectType="DerivedColumn" name="DELIVERY_NUM" entityAlias="DerivedTable_1">
+                                                                                <queryObject qbObjectType="Column" name="VBELN" displayName="VBELN" dbObjectType="Column" dbObjectName="VBELN" entityAlias="zsapsltlikp01"/>
+                                                                            </queryObject>
+                                                                        </queryObject>
+                                                                    </queryObject>
+                                                                </queryObject>
+                                                            </queryObject>
+                                                        </queryObject>
+                                                    </queryObject>
+                                                </queryObject>
+                                            </queryObject>
+                                        </queryObject>
+                                    </queryObject>
+                                </queryObject>
+                            </queryObject>
+                        </queryObject>
+                    </source>
+                    <target qbObjectType="Column" name="VBELN" displayName="VBELN" dbObjectType="Column" dbObjectName="VBELN" entityAlias="zsapsltvttp01"/>
+                </join>
+                <sqlField sqlFieldType="Select" displayName="DerivedTable_16_1.*">
+                    <queryObject qbObjectType="AllColumns" name="DerivedTable_16" displayName="DerivedTable_16_1.*" dbObjectType="DerivedTable" dbObjectName="DerivedTable_16" entityAlias="DerivedTable_16_1"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="SHIPMENT_NUMBER : TKNUM" alias="SHIPMENT_NUMBER">
+                    <queryObject qbObjectType="Column" name="TKNUM" displayName="TKNUM" dbObjectType="Column" dbObjectName="TKNUM" entityAlias="zsapsltvttp01"/>
+                </sqlField>
+            </sheet>
+            <sheet sqlSheetType="DerivedTable" name="DerivedTable_18" title="DerivedTable_18" displayIndex="2">
+                <options/>
+                <decks>
+                    <deck id="Select" show="true" bounds="165,5,1360,30"/>
+                    <deck id="Where" show="true" bounds="5,5,155,59"/>
+                    <deck id="GroupBy" show="true" bounds="5,69,155,59"/>
+                    <deck id="Having" show="true" bounds="5,133,155,59"/>
+                    <deck id="OrderBy" show="true" bounds="5,197,155,59"/>
+                    <deck id="Union" show="true" bounds="5,261,155,59"/>
+                    <deck id="IndexManager" show="false" bounds="0,0,0,0"/>
+                </decks>
+                <layout>
+                    <item type="row">
+                        <children>
+                            <item type="column">
+                                <children>
+                                    <item type="widget" key="Where"/>
+                                    <item type="widget" key="GroupBy"/>
+                                    <item type="widget" key="Having"/>
+                                    <item type="widget" key="OrderBy"/>
+                                    <item type="widget" key="Union"/>
+                                </children>
+                            </item>
+                            <item type="column">
+                                <children>
+                                    <item type="widget" key="Select"/>
+                                    <item type="widget" key="main"/>
+                                </children>
+                            </item>
+                        </children>
+                    </item>
+                </layout>
+                <sqlEntity dbObjectType="DerivedTable" name="DerivedTable_17" alias="DerivedTable_17_1" schema="" database="annular-garage-274212" derivedSheet="DerivedTable_17">
+                    <uiProperties showNameOnly="false" explicitStateChange="false" bounds="15,7,175,250"/>
+                </sqlEntity>
+                <sqlEntity dbObjectType="Table" name="zsapsltvttk01" alias="zsapsltvttk01" schema="zsapsltdev01" database="sap01-188316">
+                    <uiProperties showNameOnly="false" explicitStateChange="false" bounds="247,7,175,250"/>
+                </sqlEntity>
+                <join operator="=" allRowsFromSource="true" allRowsFromTarget="false">
+                    <source qbObjectType="DerivedColumn" name="SHIPMENT_NUMBER" entityAlias="DerivedTable_17_1">
+                        <queryObject qbObjectType="Column" name="TKNUM" displayName="TKNUM" dbObjectType="Column" dbObjectName="TKNUM" entityAlias="zsapsltvttp01"/>
+                    </source>
+                    <target qbObjectType="Column" name="TKNUM" displayName="TKNUM" dbObjectType="Column" dbObjectName="TKNUM" entityAlias="zsapsltvttk01"/>
+                </join>
+                <sqlField sqlFieldType="Select" displayName="DerivedTable_17_1.*">
+                    <queryObject qbObjectType="AllColumns" name="DerivedTable_17" displayName="DerivedTable_17_1.*" dbObjectType="DerivedTable" dbObjectName="DerivedTable_17" entityAlias="DerivedTable_17_1"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="HANDLE_SHIPMENT : HANDLE" alias="HANDLE_SHIPMENT">
+                    <queryObject qbObjectType="Column" name="HANDLE" displayName="HANDLE" dbObjectType="Column" dbObjectName="HANDLE" entityAlias="zsapsltvttk01"/>
+                </sqlField>
+            </sheet>
+            <sheet sqlSheetType="DerivedTable" name="DerivedTable_19" title="DerivedTable_19" tabColor="-1" displayIndex="1">
+                <options/>
+                <decks>
+                    <deck id="Select" show="true" bounds="165,5,1360,30"/>
+                    <deck id="Where" show="true" bounds="5,5,155,144"/>
+                    <deck id="GroupBy" show="true" bounds="5,154,155,59"/>
+                    <deck id="Having" show="true" bounds="5,218,155,59"/>
+                    <deck id="OrderBy" show="true" bounds="5,282,155,59"/>
+                    <deck id="Union" show="true" bounds="5,346,155,59"/>
+                    <deck id="IndexManager" show="false" bounds="0,0,0,0"/>
+                </decks>
+                <layout>
+                    <item type="row">
+                        <children>
+                            <item type="column">
+                                <children>
+                                    <item type="widget" key="Where"/>
+                                    <item type="widget" key="GroupBy"/>
+                                    <item type="widget" key="Having"/>
+                                    <item type="widget" key="OrderBy"/>
+                                    <item type="widget" key="Union"/>
+                                </children>
+                            </item>
+                            <item type="column">
+                                <children>
+                                    <item type="widget" key="Select"/>
+                                    <item type="widget" key="main"/>
+                                </children>
+                            </item>
+                        </children>
+                    </item>
+                </layout>
+                <sqlEntity dbObjectType="DerivedTable" name="DerivedTable_18" alias="DerivedTable_18_1" schema="" database="annular-garage-274212" derivedSheet="DerivedTable_18">
+                    <uiProperties showNameOnly="false" explicitStateChange="false" bounds="15,7,175,250"/>
+                </sqlEntity>
+                <sqlEntity dbObjectType="Table" name="zsapslttsege01" alias="zsapslttsege01_1" schema="zsapsltdev01" database="sap01-188316">
+                    <uiProperties showNameOnly="false" explicitStateChange="false" bounds="247,7,175,250"/>
+                </sqlEntity>
+                <join operator="=" allRowsFromSource="true" allRowsFromTarget="false">
+                    <source qbObjectType="DerivedColumn" name="HANDLE_SHIPMENT" entityAlias="DerivedTable_18_1">
+                        <queryObject qbObjectType="Column" name="HANDLE" displayName="HANDLE" dbObjectType="Column" dbObjectName="HANDLE" entityAlias="zsapsltvttk01"/>
+                    </source>
+                    <target qbObjectType="Column" name="HEAD_HDL" displayName="HEAD_HDL" dbObjectType="Column" dbObjectName="HEAD_HDL" entityAlias="zsapslttsege01_1"/>
+                </join>
+                <sqlField sqlFieldType="Select" displayName="DerivedTable_18_1.*">
+                    <queryObject qbObjectType="AllColumns" name="DerivedTable_18" displayName="DerivedTable_18_1.*" dbObjectType="DerivedTable" dbObjectName="DerivedTable_18" entityAlias="DerivedTable_18_1"/>
+                </sqlField>
+                <sqlField sqlFieldType="Select" displayName="TIME_EVENT_SHIPMENT : EVEN_TSTTO" alias="TIME_EVENT_SHIPMENT">
+                    <queryObject qbObjectType="Column" name="EVEN_TSTTO" displayName="EVEN_TSTTO" dbObjectType="Column" dbObjectName="EVEN_TSTTO" entityAlias="zsapslttsege01_1"/>
+                </sqlField>
+                <sqlField sqlFieldType="Where" operator="=" value="Y030M0001" quoteEnabled="true">
+                    <queryObject qbObjectType="Column" name="EVEN" displayName="EVEN" dbObjectType="Column" dbObjectName="EVEN" entityAlias="zsapslttsege01_1"/>
+                </sqlField>
+                <sqlField sqlFieldType="Where" operator="=" value=" " quoteEnabled="true">
+                    <queryObject qbObjectType="Column" name="EVEN" displayName="EVEN" dbObjectType="Column" dbObjectName="EVEN" entityAlias="zsapslttsege01_1"/>
+                </sqlField>
+                <filterLogic sqlFieldType="Where" filterOperator="OR"/>
+            </sheet>
+        </sheets>
+        <window height="1056" width="1936" x="-8" y="-8" showDataPane="true" dataPaneSheetProportions="0.20">
+            <dataPaneHeights>
+                <height>86</height>
+                <height>288</height>
+                <height>145</height>
+                <height>288</height>
+                <height>139</height>
+            </dataPaneHeights>
+            <worksheetContainer diagramResultProportions="0.67"/>
+        </window>
+    </workbook>
+</QueryBuilder>
